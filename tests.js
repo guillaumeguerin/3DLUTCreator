@@ -17,3 +17,13 @@ QUnit.test( "degreesToRadians()", function( assert ) {
   assert.equal( degreesToRadians(0), 0, "degreesToRadians(0) equals 0" );
   assert.equal( Math.round(degreesToRadians(135)), 2, "degreesToRadians(135) equals 2" );
 });
+
+function scalarProduct(xA, xB, yA, yB) {
+  var lineLength = Math.pow(xB - xA, 2) + Math.pow(yB - yA, 2);
+  return Math.sqrt(lineLength);
+}
+
+QUnit.test( "scalarProduct()", function( assert ) {
+  assert.equal( scalarProduct(0, 0, 0, 0), 0, "scalarProduct(0,0,0,0) equals 0" );
+  assert.equal( scalarProduct(0, 0, 20, 0), 20, "scalarProduct(0,0,0,0) equals 20" );
+});
